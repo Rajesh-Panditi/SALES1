@@ -1,0 +1,40 @@
+{
+    "synonym-grantor-service": {
+        "object_owner": {
+            "object_privileges": [
+                {
+                    "name": "SalesOrder_Years",
+                    "schema": "DMM260",
+                    "privileges_with_grant_option": [
+                        "SELECT"
+                    ]
+                },
+                {
+                    "name": "SalesOrderItem",
+                    "schema": "DMM260",
+                    "privileges_with_grant_option": [
+                        "SELECT"
+                    ]
+                }
+            ]
+        },
+        "application_user": {
+            "object_privileges": [
+                {
+                    "name": "SalesOrder_Years",
+                    "privileges": [
+                        "SELECT"
+                    ],
+                    "schema": "DMM260"
+                },
+                {
+                    "name": "SalesOrderItem",
+                    "privileges": [
+                        "SELECT"
+                    ],
+                    "schema": "DMM260"
+                }
+            ]
+        }
+    }
+}

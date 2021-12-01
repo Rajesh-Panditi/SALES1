@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="test::AAT1" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" xscCompatibilityMode="true">
+  <origin/>
+  <descriptions defaultDescription="AAT1"/>
+  <metadata changedAt="2021-11-30 07:51:35.634" createdAt="2021-11-30 07:51:35.634"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="SalesOrder_Years">
+      <resourceUri>test::SalesOrder_Years</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="SalesOrder_Years">
+    <descriptions/>
+    <attributes>
+      <attribute id="SalesOrderId" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order ID"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="SalesOrderId"/>
+      </attribute>
+      <attribute id="CreatedBy" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Created By"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="CreatedBy"/>
+      </attribute>
+      <attribute id="CreatedAt" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Created At - Date and Time"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="CreatedAt"/>
+      </attribute>
+      <attribute id="ChangedBy" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last Changed By"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="ChangedBy"/>
+      </attribute>
+      <attribute id="ChangedAt" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last Changed At - Date and Time"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="ChangedAt"/>
+      </attribute>
+      <attribute id="NoteId" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SO Note Text ID"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="NoteId"/>
+      </attribute>
+      <attribute id="PartnerId" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner ID"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="PartnerId"/>
+      </attribute>
+      <attribute id="Currency" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Code"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="Currency"/>
+      </attribute>
+      <attribute id="GrossAmount" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total Gross Amount"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="GrossAmount"/>
+      </attribute>
+      <attribute id="NetAmount" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total Net Amount"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="NetAmount"/>
+      </attribute>
+      <attribute id="TaxAmount" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Total Tax Amount"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="TaxAmount"/>
+      </attribute>
+      <attribute id="LifecycleStatus" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SO Lifecycle Status"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="LifecycleStatus"/>
+      </attribute>
+      <attribute id="BillingStatus" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Status"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="BillingStatus"/>
+      </attribute>
+      <attribute id="DeliveryStatus" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Status"/>
+        <keyMapping columnObjectName="SalesOrder_Years" columnName="DeliveryStatus"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner/>
+        <rectangleSize/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

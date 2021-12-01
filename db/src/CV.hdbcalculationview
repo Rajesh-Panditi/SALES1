@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="test::CV" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+  <origin/>
+  <descriptions defaultDescription="CV"/>
+  <metadata changedAt="2021-11-30 07:51:33.661"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="AN1">
+      <resourceUri>test::AN1</resourceUri>
+    </DataSource>
+    <DataSource id="AAT1">
+      <resourceUri>test::AAT1</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinOrder="OUTSIDE_IN" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="SalesOrderItem"/>
+        <viewAttribute id="ProductId"/>
+        <viewAttribute id="NoteId"/>
+        <viewAttribute id="Currency"/>
+        <viewAttribute id="GrossAmount"/>
+        <viewAttribute id="NetAmount"/>
+        <viewAttribute id="TaxAmount"/>
+        <viewAttribute id="ItemATPStatus"/>
+        <viewAttribute id="OPItemPos"/>
+        <viewAttribute id="Quantity"/>
+        <viewAttribute id="QuantityUnit"/>
+        <viewAttribute id="DeliveryDate"/>
+        <viewAttribute id="SalesOrderId"/>
+        <viewAttribute id="CreatedBy"/>
+        <viewAttribute id="CreatedAt"/>
+        <viewAttribute id="ChangedBy"/>
+        <viewAttribute id="ChangedAt"/>
+        <viewAttribute id="NoteId_at"/>
+        <viewAttribute id="PartnerId"/>
+        <viewAttribute id="Currency_at"/>
+        <viewAttribute id="Gross_Amount_at"/>
+        <viewAttribute id="NetAmount_at"/>
+        <viewAttribute id="TaxAmount_at"/>
+        <viewAttribute id="LifecycleStatus"/>
+        <viewAttribute id="BillingStatus"/>
+        <viewAttribute id="DeliveryStatus"/>
+        <viewAttribute id="DeliveryStatus_1"/>
+        <viewAttribute id="BillingStatus_1"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#AN1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SalesOrderItem" source="SalesOrderItem"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ProductId" source="ProductId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NoteId" source="NoteId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Currency" source="Currency"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GrossAmount" source="GrossAmount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NetAmount" source="NetAmount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TaxAmount" source="TaxAmount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ItemATPStatus" source="ItemATPStatus"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OPItemPos" source="OPItemPos"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Quantity" source="Quantity"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QuantityUnit" source="QuantityUnit"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DeliveryDate" source="DeliveryDate"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SalesOrderId" source="SalesOrderId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CreatedBy" source="CreatedBy"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CreatedAt" source="CreatedAt"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ChangedBy" source="ChangedBy"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ChangedAt" source="ChangedAt"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NoteId_at" source="NoteId_at"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PartnerId" source="PartnerId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Currency_at" source="Currency_at"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Gross_Amount_at" source="Gross_Amount_at"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NetAmount_at" source="NetAmount_at"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TaxAmount_at" source="TaxAmount_at"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LifecycleStatus" source="LifecycleStatus"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BillingStatus" source="BillingStatus"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DeliveryStatus" source="DeliveryStatus"/>
+      </input>
+      <input node="#AAT1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="DeliveryStatus_1" source="DeliveryStatus"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BillingStatus_1" source="BillingStatus"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SalesOrderId" source="SalesOrderId"/>
+      </input>
+      <joinAttribute name="SalesOrderId"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="SalesOrderItem" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order Item"/>
+        <keyMapping columnObjectName="Join_1" columnName="SalesOrderItem"/>
+      </attribute>
+      <attribute id="ProductId" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Product ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ProductId"/>
+      </attribute>
+      <attribute id="NoteId" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Note Text ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="NoteId"/>
+      </attribute>
+      <attribute id="Currency" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Code"/>
+        <keyMapping columnObjectName="Join_1" columnName="Currency"/>
+      </attribute>
+      <attribute id="ItemATPStatus" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item ATP Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="ItemATPStatus"/>
+      </attribute>
+      <attribute id="OPItemPos" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order Item"/>
+        <keyMapping columnObjectName="Join_1" columnName="OPItemPos"/>
+      </attribute>
+      <attribute id="QuantityUnit" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity Unit"/>
+        <keyMapping columnObjectName="Join_1" columnName="QuantityUnit"/>
+      </attribute>
+      <attribute id="SalesOrderId" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="SalesOrderId"/>
+      </attribute>
+      <attribute id="CreatedBy" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Created By"/>
+        <keyMapping columnObjectName="Join_1" columnName="CreatedBy"/>
+      </attribute>
+      <attribute id="CreatedAt" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Created At - Date and Time"/>
+        <keyMapping columnObjectName="Join_1" columnName="CreatedAt"/>
+      </attribute>
+      <attribute id="ChangedBy" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last Changed By"/>
+        <keyMapping columnObjectName="Join_1" columnName="ChangedBy"/>
+      </attribute>
+      <attribute id="ChangedAt" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Last Changed At - Date and Time"/>
+        <keyMapping columnObjectName="Join_1" columnName="ChangedAt"/>
+      </attribute>
+      <attribute id="NoteId_at" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NoteId_at"/>
+        <keyMapping columnObjectName="Join_1" columnName="NoteId_at"/>
+      </attribute>
+      <attribute id="PartnerId" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Partner ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="PartnerId"/>
+      </attribute>
+      <attribute id="Currency_at" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency_at"/>
+        <keyMapping columnObjectName="Join_1" columnName="Currency_at"/>
+      </attribute>
+      <attribute id="Gross_Amount_at" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Gross_Amount_at"/>
+        <keyMapping columnObjectName="Join_1" columnName="Gross_Amount_at"/>
+      </attribute>
+      <attribute id="NetAmount_at" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NetAmount_at"/>
+        <keyMapping columnObjectName="Join_1" columnName="NetAmount_at"/>
+      </attribute>
+      <attribute id="TaxAmount_at" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TaxAmount_at"/>
+        <keyMapping columnObjectName="Join_1" columnName="TaxAmount_at"/>
+      </attribute>
+      <attribute id="LifecycleStatus" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SO Lifecycle Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="LifecycleStatus"/>
+      </attribute>
+      <attribute id="BillingStatus" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="BillingStatus"/>
+      </attribute>
+      <attribute id="DeliveryStatus" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="DeliveryStatus"/>
+      </attribute>
+      <attribute id="DeliveryStatus_1" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Delivery Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="DeliveryStatus_1"/>
+      </attribute>
+      <attribute id="BillingStatus_1" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Billing Status"/>
+        <keyMapping columnObjectName="Join_1" columnName="BillingStatus_1"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="GrossAmount" order="5" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Gross Amount"/>
+        <measureMapping columnObjectName="Join_1" columnName="GrossAmount"/>
+      </measure>
+      <measure id="NetAmount" order="6" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Net Amount"/>
+        <measureMapping columnObjectName="Join_1" columnName="NetAmount"/>
+      </measure>
+      <measure id="TaxAmount" order="7" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Tax Amount"/>
+        <measureMapping columnObjectName="Join_1" columnName="TaxAmount"/>
+      </measure>
+      <measure id="Quantity" order="10" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity"/>
+        <measureMapping columnObjectName="Join_1" columnName="Quantity"/>
+      </measure>
+      <measure id="DeliveryDate" order="12" aggregationType="sum" engineAggregation="count" measureType="simple">
+        <descriptions defaultDescription="Scheduled Delivery Date"/>
+        <measureMapping columnObjectName="Join_1" columnName="DeliveryDate"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="20" y="270"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

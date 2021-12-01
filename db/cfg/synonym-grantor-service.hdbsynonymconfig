@@ -1,0 +1,14 @@
+{
+    "test::SalesOrder_Years": {
+        "target": {
+            "schema": "DMM260",
+            "object": "SalesOrder_Years"
+        }
+    },
+    "test::SalesOrderItem": {
+        "target": {
+            "schema": "DMM260",
+            "object": "SalesOrderItem"
+        }
+    }
+}

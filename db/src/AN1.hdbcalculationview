@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="test::AN1" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" analyticViewCompatibilityMode="true" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" rowCounterName="row.count" xscCompatibilityMode="true">
+  <origin/>
+  <descriptions defaultDescription="AN1"/>
+  <metadata changedAt="2021-11-30 07:51:34.509" createdAt="2021-11-30 07:51:34.509"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="SalesOrderItem_1">
+      <resourceUri>test::SalesOrderItem</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="SalesOrderId"/>
+        <viewAttribute id="SalesOrderItem"/>
+        <viewAttribute id="ProductId"/>
+        <viewAttribute id="NoteId"/>
+        <viewAttribute id="Currency"/>
+        <viewAttribute id="ItemATPStatus"/>
+        <viewAttribute id="OPItemPos"/>
+        <viewAttribute id="QuantityUnit"/>
+        <viewAttribute id="GrossAmount"/>
+        <viewAttribute id="NetAmount"/>
+        <viewAttribute id="TaxAmount"/>
+        <viewAttribute id="Quantity"/>
+        <viewAttribute id="DeliveryDate"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#SalesOrderItem_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SalesOrderId" source="SalesOrderId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SalesOrderItem" source="SalesOrderItem"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ProductId" source="ProductId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NoteId" source="NoteId"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Currency" source="Currency"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ItemATPStatus" source="ItemATPStatus"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OPItemPos" source="OPItemPos"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QuantityUnit" source="QuantityUnit"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GrossAmount" source="GrossAmount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NetAmount" source="NetAmount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TaxAmount" source="TaxAmount"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="Quantity" source="Quantity"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DeliveryDate" source="DeliveryDate"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection">
+    <descriptions/>
+    <attributes>
+      <attribute id="SalesOrderItem" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order Item"/>
+        <keyMapping columnObjectName="Projection" columnName="SalesOrderItem"/>
+      </attribute>
+      <attribute id="ProductId" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Product ID"/>
+        <keyMapping columnObjectName="Projection" columnName="ProductId"/>
+      </attribute>
+      <attribute id="NoteId" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PO Note Text ID"/>
+        <keyMapping columnObjectName="Projection" columnName="NoteId"/>
+      </attribute>
+      <attribute id="Currency" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Code"/>
+        <keyMapping columnObjectName="Projection" columnName="Currency"/>
+      </attribute>
+      <attribute id="ItemATPStatus" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item ATP Status"/>
+        <keyMapping columnObjectName="Projection" columnName="ItemATPStatus"/>
+      </attribute>
+      <attribute id="OPItemPos" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Sales Order Item"/>
+        <keyMapping columnObjectName="Projection" columnName="OPItemPos"/>
+      </attribute>
+      <attribute id="QuantityUnit" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Quantity Unit"/>
+        <keyMapping columnObjectName="Projection" columnName="QuantityUnit"/>
+      </attribute>
+      <attribute id="SalesOrderId$local">
+        <descriptions defaultDescription="Sales Order ID"/>
+        <keyMapping columnObjectName="Projection" columnName="SalesOrderId"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="GrossAmount" order="5" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Gross Amount"/>
+        <measureMapping columnObjectName="Projection" columnName="GrossAmount"/>
+      </measure>
+      <measure id="NetAmount" order="6" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Net Amount"/>
+        <measureMapping columnObjectName="Projection" columnName="NetAmount"/>
+      </measure>
+      <measure id="TaxAmount" order="7" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Tax Amount"/>
+        <measureMapping columnObjectName="Projection" columnName="TaxAmount"/>
+      </measure>
+      <measure id="Quantity" order="10" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity"/>
+        <measureMapping columnObjectName="Projection" columnName="Quantity"/>
+      </measure>
+      <measure id="DeliveryDate" order="12" aggregationType="count" engineAggregation="count" measureType="simple">
+        <descriptions defaultDescription="Scheduled Delivery Date"/>
+        <measureMapping columnObjectName="Projection" columnName="DeliveryDate"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="test::AAT1">
+        <attributes>
+          <attributeRef>#SalesOrderId$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>SalesOrderId</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential" optimizeJoinColumns="false"/>
+        <associatedAttributeFeatures>
+          <attributeReference alias="NoteId_at" attributeName="NoteId">
+            <descriptions defaultDescription="NoteId_at"/>
+          </attributeReference>
+          <attributeReference alias="Currency_at" attributeName="Currency">
+            <descriptions defaultDescription="Currency_at"/>
+          </attributeReference>
+          <attributeReference alias="Gross_Amount_at" attributeName="GrossAmount">
+            <descriptions defaultDescription="Gross_Amount_at"/>
+          </attributeReference>
+          <attributeReference alias="NetAmount_at" attributeName="NetAmount">
+            <descriptions defaultDescription="NetAmount_at"/>
+          </attributeReference>
+          <attributeReference alias="TaxAmount_at" attributeName="TaxAmount">
+            <descriptions defaultDescription="TaxAmount_at"/>
+          </attributeReference>
+        </associatedAttributeFeatures>
+      </logicalJoin>
+    </sharedDimensions>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner/>
+        <rectangleSize/>
+      </shape>
+      <shape modelObjectName="Projection" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner/>
+        <rectangleSize/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

@@ -1,0 +1,28 @@
+{
+    "role": {
+        "name": "test::PublicAccessObjects",
+        "object_privileges": [
+            {
+                "name": "test::AAT1",
+                "type": "VIEW",
+                "privileges": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "test::AN1",
+                "type": "VIEW",
+                "privileges": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "test::CV",
+                "type": "VIEW",
+                "privileges": [
+                    "SELECT"
+                ]
+            }
+        ]
+    }
+}

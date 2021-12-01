@@ -1,0 +1,25 @@
+_schema-version: 2.0
+ID: SALES
+description: 
+version: 0.0.0
+
+modules:
+  - name: SALES-db
+    type: hdb
+    path: db
+    requires:
+      - name: SALES-hdi
+        properties:
+            TARGET_CONTAINER: ~{service-name}
+      - name: synonym-grantor-service
+
+
+resources:
+  - name: SALES-hdi
+    type: com.sap.xs.hdi-container
+    properties:
+        service-name: ${service-name}
+  - name: synonym-grantor-service
+    type: org.cloudfoundry.existing-service
+    parameters:
+        service-name: synonym-grantor-service

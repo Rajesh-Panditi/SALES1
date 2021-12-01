@@ -148,6 +148,7 @@
         "hdbpublicsynonym" : {
             "plugin_name" : "com.sap.hana.di.publicsynonym"
         
+        
         }
     }
 }

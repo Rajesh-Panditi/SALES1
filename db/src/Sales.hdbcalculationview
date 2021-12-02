@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Sales" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Sales"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="test::SalesOrderItem">
+    <resourceUri>test::SalesOrderItem</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="test::SalesOrderItem">
+  <attributes>
+    <attribute id="SalesOrderId" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sales Order ID"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="SalesOrderId"/>
+    </attribute>
+    <attribute id="SalesOrderItem" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sales Order Item"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="SalesOrderItem"/>
+    </attribute>
+    <attribute id="ProductId" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Product ID"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="ProductId"/>
+    </attribute>
+    <attribute id="NoteId" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PO Note Text ID"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="NoteId"/>
+    </attribute>
+    <attribute id="Currency" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency Code"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="Currency"/>
+    </attribute>
+    <attribute id="GrossAmount" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Gross Amount"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="GrossAmount"/>
+    </attribute>
+    <attribute id="NetAmount" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Net Amount"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="NetAmount"/>
+    </attribute>
+    <attribute id="TaxAmount" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Tax Amount"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="TaxAmount"/>
+    </attribute>
+    <attribute id="ItemATPStatus" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Item ATP Status"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="ItemATPStatus"/>
+    </attribute>
+    <attribute id="OPItemPos" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sales Order Item"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="OPItemPos"/>
+    </attribute>
+    <attribute id="Quantity" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Quantity"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="Quantity"/>
+    </attribute>
+    <attribute id="QuantityUnit" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Quantity Unit"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="QuantityUnit"/>
+    </attribute>
+    <attribute id="DeliveryDate" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Scheduled Delivery Date"/>
+      <keyMapping columnObjectName="SalesOrderItem" columnName="DeliveryDate"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
